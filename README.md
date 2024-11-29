@@ -1,5 +1,19 @@
-# Vue 3 + Vite
+# Interactive "To-Do" Board
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Installation
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Follow these steps to set up the project locally:
+
+1. Create a .env file in the project root directory and add the following environment variable:
+
+### `VITE_API_KEY=domain`
+
+Replace domain with your actual API key
+
+2. Install dependencies:
+
+### `npm install`
+
+3. Run the development server:
+
+### `npm run dev`

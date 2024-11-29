@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <div class="bg-blue-500 text-white p-4 bg-tahini">
-      This is a Tailwind-styled div!
-    </div>
-    <button
-      class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ..."
-    >
-      Save changes
-    </button>
-  </div>
+  <create-task></create-task>
+  <task-filters></task-filters>
+  <task-list></task-list>
 </template>
 
 <script setup>
+import CreateTask from "./components/CreateTask.vue";
+import TaskList from "./components/TaskList.vue";
+import TaskFilters from "./components/TaskFilters.vue";
+import { onMounted, onUpdated } from "vue";
 import { useTasksStore } from "./stores/tasks";
 
 const store = useTasksStore();
+const { fetchTasks } = store;
+
+onMounted(() => {
+  fetchTasks();
+});
 </script>
 
 <style scoped></style>
